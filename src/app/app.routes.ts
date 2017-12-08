@@ -7,10 +7,10 @@ import {
  } from './components/index.paginas';
 
 const routes: Routes = [
-  { path: '', component: PortafolioComponent },
+  { path: 'home', component: PortafolioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'producto', component: ProductoComponent },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 export const routing = RouterModule.forRoot(routes, { useHash: true } );

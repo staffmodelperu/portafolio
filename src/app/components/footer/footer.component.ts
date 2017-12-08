@@ -1,3 +1,4 @@
+import { InformacionService } from './../../services/informacion.service';
 import { Component} from '@angular/core';
 
 @Component({
@@ -9,5 +10,8 @@ export class FooterComponent {
 
   anio: number = new Date().getFullYear();
 
+  constructor( public _is: InformacionService ) {
+
+  }
 
 }
