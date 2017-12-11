@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ProductosService {
 
-  producto: any[] = [];
+  productos: any[] = [];
   cargando: Boolean = true;
 
   constructor(private http: Http ) {
@@ -19,6 +19,7 @@ export class ProductosService {
         .subscribe(res => {
           console.log( res.json() );
           this.cargando = false;
+          this.productos = res.json();
         });
     }
 }
