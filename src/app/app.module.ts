@@ -13,7 +13,9 @@ import { PortafolioComponent } from './components/portafolio/portafolio.componen
 import { AboutComponent } from './components/about/about.component';
 import { ProductoComponent } from './components/producto/producto.component';
 
+// services
 import { InformacionService } from './services/informacion.service';
+import { ProductosService } from './services/productos.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { InformacionService } from './services/informacion.service';
     routing
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })

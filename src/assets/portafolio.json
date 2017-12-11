@@ -1,0 +1,21 @@
+{
+  "equipo" : [ {
+    "frase" : "Nunca dejes de innovar",
+    "nombre" : "Brando Jesus",
+    "subtitulo" : "Sistemas",
+    "twitter" : "@dracon11",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/portafolio-57aa1.appspot.com/o/team-1.jpg?alt=media&token=2495c788-0f91-473c-8dfd-170a37b2f54a"
+  }, {
+    "frase" : "something",
+    "nombre" : "Jesus Dea",
+    "subtitulo" : "CEO",
+    "twitter" : "@cabezon",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/portafolio-57aa1.appspot.com/o/team-2.jpg?alt=media&token=91068e93-be58-4c64-8ec3-09d7b7c19081"
+  }, {
+    "frase" : "something",
+    "nombre" : "Victor",
+    "subtitulo" : "Administracion",
+    "twitter" : "@vicbryan",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/portafolio-57aa1.appspot.com/o/team-3.jpg?alt=media&token=f7588881-e8db-4b92-8aab-fd50f580a28a"
+  } ]
+}
