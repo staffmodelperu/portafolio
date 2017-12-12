@@ -21,7 +21,13 @@ export class ProductosService {
           setTimeout(() => {
             this.cargando = false;
             this.productos = res.json();
-          }, 1500)
+          }, 1500);
         });
-    }
+  }
+  public cargarProducto(cod: string) {
+    return this.http.get(`https://portafolio-57aa1.firebaseio.com/productos/${ cod }.json`);
+
+  }
+
+
 }
