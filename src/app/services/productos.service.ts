@@ -13,9 +13,22 @@ export class ProductosService {
   }
   public buscarProducto(termino: string) {
 
-    console.log('Buscando productp..');
+    console.log('Buscando producto..');
     console.log( this.productos.length );
+
+    if ( this.productos.length === 0 ) {
+      this.cargarProductos().then( () => {
+        // termino la carga
+        this.filtrarProductos(termino);
+      });
+    } else {
+      this.filtrarProductos(termino);
+    }
+  }
+
+  public filtrarProductos(termino: string) {
     this.productos.forEach( prod => {
+      console.log('los productos son...');
       console.log(prod);
     });
   }
@@ -23,14 +36,21 @@ export class ProductosService {
   public cargarProductos() {
     this.cargando = true;
 
-    this.http.get('https://portafolio-57aa1.firebaseio.com/productos_idx.json')
-        .subscribe(res => {
-          // console.log( res.json() );
-          setTimeout(() => {
-            this.cargando = false;
-            this.productos = res.json();
-          }, 1500);
-        });
+    const promesa = new Promise( ( resolve, reject ) => {
+      this.http.get('https://portafolio-57aa1.firebaseio.com/productos_idx.json')
+      .subscribe( res => {
+        // console.log( res.json() );
+
+        // setTimeout(() => {
+          this.cargando = false;
+          this.productos = res.json();
+          resolve();
+        // }, 1500);
+      });
+    });
+
+    return promesa;
+
   }
 
   public cargarProducto(cod: string) {
