@@ -14,7 +14,7 @@ export class SearchComponent  {
 
     route.params.subscribe(parametros => {
       this.termino = parametros['termino'];
-      console.log(this.termino);
+      // console.log(this.termino);
 
       _ps.buscarProducto( this.termino );
 
